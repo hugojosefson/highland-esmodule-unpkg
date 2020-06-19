@@ -1,0 +1,21 @@
+{
+  "name": "highland-esmodule",
+  "version": "2.13.5",
+  "description": "Re-publication of highland.js as an esmodule.",
+  "module": "index.mjs",
+  "scripts": {
+    "build": "./generate-module.mjs > index.mjs"
+  },
+  "keywords": [
+    "highland",
+    "highlandjs",
+    "esm",
+    "esmodule",
+    "module"
+  ],
+  "license": "Apache-2.0",
+  "dependencies": {
+    "highland": "=2.13.5"
+  },
+  "devDependencies": {}
+}
