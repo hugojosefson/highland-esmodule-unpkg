@@ -8,6 +8,12 @@ This is meant to be a proper(?) esmodule re-export of
 
 No install. Use it directly from your module script on a web page.
 
+## Usage
+
+Simply `import` the module
+[https://unpkg.com/@hugojosefson/highland-esmodule-unpkg](https://unpkg.com/@hugojosefson/highland-esmodule-unpkg)
+in a script module, running inside a web browser.
+
 ## Usage example
 
 Put this in a file named `index.html`:
