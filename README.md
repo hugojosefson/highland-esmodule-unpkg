@@ -18,7 +18,7 @@ browser:
 For a better cache experience (1 year vs 10 minutes), you may want to
 specify the exact version in the URL:
 
-[https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1](https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1)
+[https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-2](https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-2)
 
 ## Usage example
 
@@ -31,8 +31,8 @@ Put this in a file named `index.html`:
 Put this in `mymodule.mjs`, in the same directory as `index.html`:
 
 ```js
-import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1'
-import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1'
+import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-2'
+import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-2'
 
 _([1, 2, 'three', 'four'])
   .map(n => ({n, numeric: !isString(n)}))

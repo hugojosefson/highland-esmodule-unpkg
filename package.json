@@ -1,6 +1,6 @@
 {
   "name": "@hugojosefson/highland-esmodule-unpkg",
-  "version": "2.13.5-1",
+  "version": "2.13.5-2",
   "description": "Proper(?) browser esmodule re-export of Highland.js via unpkg.com.",
   "module": "index.mjs",
   "unpkg": "index.mjs",
