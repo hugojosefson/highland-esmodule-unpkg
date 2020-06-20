@@ -5,7 +5,7 @@ import highland from 'highland'
 const keys = Object.keys(highland).join(', ')
 
 const output = 
-`const oldHighland = window.highland
+`const noConflict = window.highland
 import 'https://unpkg.com/highland@2.13.5/dist/highland.min.js'
 
 const { highland } = window
@@ -13,7 +13,7 @@ const { highland } = window
 export default highland
 export const {${keys}} = highland
 
-window.highland = oldHighland
+window.highland = noConflict
 `
 
 console.log(output)
