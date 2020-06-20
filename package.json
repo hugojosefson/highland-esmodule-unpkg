@@ -3,6 +3,7 @@
   "version": "2.13.5-0",
   "description": "Proper(?) browser esmodule re-export of Highland.js via unpkg.com.",
   "module": "index.mjs",
+  "unpkg": "index.mjs",
   "scripts": {
     "prepare": "./generate-module.mjs > index.mjs"
   },
