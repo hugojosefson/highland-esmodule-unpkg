@@ -8,12 +8,6 @@ This is meant to be a proper(?) esmodule re-export of
 
 No install. Use it directly from your module script on a web page.
 
-## Usage
-
-Simply `import` the module
-[https://unpkg.com/@hugojosefson/highland-esmodule-unpkg?module](https://unpkg.com/@hugojosefson/highland-esmodule-unpkg?module)
-in a script module, running inside a web browser.
-
 ## Usage example
 
 Put this in a file named `index.html`:
@@ -25,8 +19,8 @@ Put this in a file named `index.html`:
 Put this in `mymodule.mjs`, in the same directory as `index.html`:
 
 ```js
-import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg?module'
-import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg?module'
+import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg'
+import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg'
 
 _([1, 2, 'three', 'four'])
   .map(n => ({n, numeric: !isString(n)}))
