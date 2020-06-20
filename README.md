@@ -1,28 +1,51 @@
-# highland-esmodule
+# @hugojosefson/highland-esmodule-unpkg
 
-This is a re-pack of [highland](https://github.com/caolan/highland) as an esmodule.
+This is meant to be a proper(?) esmodule re-export of
+[Highland.js](https://github.com/caolan/highland), loaded via
+[unpkg.com](https://unpkg.com/), for use in a modern web browser.
 
 ## Installation
 
-```bash
-yarn add highland-esmodule
+No install. Use it directly from your module script on a web page.
 
-# or
+## Usage example
 
-npm install highland-esmodule
+Put this in a file named `index.html`:
+
+```html
+<script type="module" src="./mymodule.mjs"></script>
 ```
 
-### Usage
-
-If installed locally:
+Put this in `mymodule.mjs`, in the same directory as `index.html`:
 
 ```js
-import _ from 'highland-esmodule'
-import { isStream } from 'highland-esmodule'
+import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg'
+import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg'
+
+_([1, 2, 'three', 'four'])
+  .map(n => ({n, numeric: !isString(n)}))
+  .map(JSON.stringify)
+  .collect()
+  .map(array => array.join('\n'))
+  .each(s => document.body.innerText = s)
 ```
 
-Or without installation, via [unpkg.com](unpkg.com):
+Serve both files over HTTP (or HTTPS):
 
-```js
-import _ from 'https://unpkg.com/highland-esmodule'
 ```
+npx serve
+```
+
+Browse to the URL provided by `serve`, probably
+[http://localhost:5000/](http://localhost:5000/). You should see something
+like this:
+
+```
+{ "n": 1, "numeric": true }
+{ "n": 2, "numeric": true }
+{ "n": "three", "numeric": false }
+{ "n": "four", "numeric": false }
+```
+
+This should work directly in any modern browser (because they support
+esmodules).
