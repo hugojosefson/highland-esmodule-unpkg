@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 
-import _ from 'highland'
+import highland from 'highland'
 
-const keys = Object.keys(_).join(', ')
+const keys = Object.keys(highland).join(', ')
 
 const output = `
-import _ from 'highland'
+import highland from './bundle.cjs'
 
-const {${keys}} = _
-
-export default _
-export {${keys}}
+export default highland
+export const {${keys}} = highland
 `
 
 console.log(output)
