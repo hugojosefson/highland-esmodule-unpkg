@@ -6,6 +6,10 @@
   "scripts": {
     "prepare": "./generate-module.mjs > index.mjs"
   },
+  "files": [
+    "index.mjs",
+    "package.json"
+  ],
   "keywords": [
     "highland",
     "highlandjs",
