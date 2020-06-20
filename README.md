@@ -1,6 +1,6 @@
 # @hugojosefson/highland-esmodule-unpkg
 
-This is meant to be a proper(?) esmodule re-export of
+This is meant to be a (hopefully) proper esmodule re-export of
 [Highland.js](https://github.com/caolan/highland), loaded via
 [unpkg.com](https://unpkg.com/), for use in a modern web browser.
 
@@ -10,9 +10,15 @@ No install. Use it directly from your module script on a web page.
 
 ## Usage
 
-Simply `import` the module
+Simply `import` this module from a script module, running inside a web
+browser:
+
 [https://unpkg.com/@hugojosefson/highland-esmodule-unpkg](https://unpkg.com/@hugojosefson/highland-esmodule-unpkg)
-in a script module, running inside a web browser.
+
+For a better cache experience (1 year vs 10 minutes), you may want to
+specify the exact version in the URL:
+
+[https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1](https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1)
 
 ## Usage example
 
@@ -25,8 +31,8 @@ Put this in a file named `index.html`:
 Put this in `mymodule.mjs`, in the same directory as `index.html`:
 
 ```js
-import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg'
-import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg'
+import _ from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1'
+import { isString } from 'https://unpkg.com/@hugojosefson/highland-esmodule-unpkg@2.13.5-1'
 
 _([1, 2, 'three', 'four'])
   .map(n => ({n, numeric: !isString(n)}))
@@ -43,8 +49,11 @@ npx serve
 ```
 
 Browse to the URL provided by `serve`, probably
-[http://localhost:5000/](http://localhost:5000/). You should see something
-like this:
+[http://localhost:5000/](http://localhost:5000/). Or cheat and just go
+to
+[https://raw.githack.com/hugojosefson/highland-esmodule-unpkg/master/example-page.html](https://raw.githack.com/hugojosefson/highland-esmodule-unpkg/master/example-page.html)!
+
+You should see something like this:
 
 ```
 { "n": 1, "numeric": true }
