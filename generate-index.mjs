@@ -7,6 +7,7 @@ const output =
 
 import 'https://unpkg.com/highland@${pkg.version}/dist/highland.min.js'
 const { highland } = window
+
 export default highland
 export const {${keys}} = highland
 
