@@ -6,7 +6,7 @@
   "unpkg": "index.mjs",
   "scripts": {
     "prepare": "run-p build:*",
-    "build:index.mjs": "node --experimental-json-modules generate-index.mjs  > index.mjs",
+    "build:index.mjs": "node --experimental-json-modules generate-index.mjs > index.mjs",
     "build:README.md": "replace 'unpkg@[0-9.-]*' \"unpkg@${npm_package_version}\" README.md",
     "build:example-module.mjs": "replace 'unpkg@[0-9.-]*' \"unpkg@${npm_package_version}\" example-module.mjs",
     "postversion": "run-p build:* && git add --all && git commit --amend -C HEAD && git tag -f v${npm_package_version} HEAD"
