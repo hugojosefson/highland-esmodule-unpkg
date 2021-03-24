@@ -3,4 +3,5 @@
 /*.log
 .*.swp
 /index.mjs
+/index.d.ts
 /*.tgz

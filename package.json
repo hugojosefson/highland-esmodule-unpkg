@@ -1,18 +1,26 @@
 {
-  "name": "@hugojosefson/highland-esmodule-unpkg",
-  "version": "2.13.5-2",
+  "name": "@hugojosefson/highland",
+  "version": "2.13.5-3",
   "description": "Proper(?) browser esmodule re-export of Highland.js via unpkg.com.",
+  "type": "module",
   "module": "index.mjs",
   "unpkg": "index.mjs",
+  "main": "index.mjs",
+  "types": "index.d.ts",
   "scripts": {
     "prepare": "run-p build:*",
     "build:index.mjs": "node --experimental-json-modules generate-index.mjs > index.mjs",
-    "build:README.md": "replace 'unpkg@[0-9.-]*' \"unpkg@${npm_package_version}\" README.md",
-    "build:example-module.mjs": "replace 'unpkg@[0-9.-]*' \"unpkg@${npm_package_version}\" example-module.mjs",
+    "build:README.md": "replace '@hugojosefson/highland@[0-9.-]*' \"@hugojosefson/highland@${npm_package_version}\" README.md",
+    "build:example-module.mjs": "replace '@hugojosefson/highland@[0-9.-]*' \"@hugojosefson/highland@${npm_package_version}\" example-module.mjs",
+    "build:index.d.ts": "./generate-types.sh",
     "postversion": "run-p build:* && git add --all && git commit --amend -C HEAD && git tag -f v${npm_package_version} HEAD"
+  },
+  "engines": {
+    "node": ">=14"
   },
   "files": [
     "index.mjs",
+    "index.d.ts",
     "package.json"
   ],
   "keywords": [
@@ -27,6 +35,7 @@
   "repository": "hugojosefson/highland-esmodule-unpkg",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@types/highland": "^2.12.12",
     "highland": "^2.13.5",
     "npm-run-all": "^4.1.5",
     "replace": "^1.2.0"
