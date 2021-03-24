@@ -7,21 +7,24 @@ This is meant to be a (hopefully) proper esmodule re-export of
 
 ## Installation
 
-No install. Use it directly from your module script on a web page, or with Deno.
+No install. Use it directly from your module script on a web page, or
+with Deno.
 
 ## Usage
 
 Simply `import` this module from a script module, running inside a web
-browser:
+browser or Deno:
 
 [https://cdn.skypack.dev/@hugojosefson/highland?dts](https://cdn.skypack.dev/@hugojosefson/highland?dts)
 
-To know which version you are using, you should
-specify the exact version in the URL:
+To be certain of which version you use, specify the exact version in the
+URL:
 
 [https://cdn.skypack.dev/@hugojosefson/highland@2.13.5-3?dts](https://cdn.skypack.dev/@hugojosefson/highland@2.13.5-3?dts)
 
-For a better cache experience (1 year vs 5 minutes) in production, you can open the import URL in a web browser, to see what that version's pinned URL is. Then use that instead.
+For a better cache experience (1 year vs 5 minutes) in production, you
+can open the import URL in a web browser, to see what that version's
+pinned URL is. Then use that instead.
 
 ## Usage example
 
